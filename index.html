@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Modular JS Practice: Comment Form</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <main class="comments">
+	
+	<h1 class="title">#giveitatitle</h1>
+	
+	<form class="comment-form">
+		<label class="comment-username-label" for="comment-username-input">name
+			<input type="text" id="comment-username-input" />
+		</label>
+		<label class="comment-body-label" for="comment-body-input">input
+			<textarea id="comment-body-input" cols="30" rows="3"></textarea>
+		</label>
+		<button type="submit" class="comment-submit-button">submit</button> 
+	</form>
+	
+
+	
+	<ul class="comments-list">
+		<script id="comment-template" type="text/template">
+			{{#comments}}
+				<li class="comment">
+					<p class="comment-username"><strong>{{name}}</strong> says:</p>
+					<p class="comment-body">{{body}}</p>
+					<button class="comment-delete-button">Delete</button>
+				</li>
+			{{/comments}}
+		</script>
+	</ul>
+	
+</main>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>

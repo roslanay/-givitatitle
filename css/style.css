@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'Interface-Regular';
+  src: url(Interface-Regular.woff);
+}
+
+html, body {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Interface-Regular";
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.comments {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 4rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin: 0 0 4rem 0;
+  color:white;
+}
+
+.comments-list {
+  width:736px;
+  list-style-type: none;
+  margin: 3rem 0;
+  padding: 0;
+}
+
+@-webkit-keyframes enter {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-75px, 0, 0);
+            transform: translate3d(-75px, 0, 0);
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-75px, 0, 0);
+            transform: translate3d(-75px, 0, 0);
+  }
+}
+.leave {
+  opacity: 0;
+  -webkit-transform: translate3d(75px, 0, 0);
+          transform: translate3d(75px, 0, 0);
+}
+
+.comment {
+  padding: 1.6rem 3.2rem;
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 0rem;
+  position: relative;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-animation: enter 0.2s ease-in-out 1;
+          animation: enter 0.2s ease-in-out 1;
+}
+
+.comment-username {
+  font-size: 1.4rem;
+  color: #666;
+}
+
+.comment-body {
+  width:736px;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.comment-form * {
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.comment-username-label, .comment-body-label {
+  line-height: 2.6rem;
+  color: #666;
+}
+
+#comment-username-input, #comment-body-input {
+  border: 2px solid #ccc;
+  border-radius: 0px;
+  width: 100%;
+  outline: none;
+  padding: 1rem 1.6rem;
+}
+#comment-username-input:focus, #comment-body-input:focus {
+  border-color: none;
+}
+
+.comment-submit-button, .comment-delete-button {
+  border: none;
+  background: white;
+  color: black;
+  border-radius: 0px;
+  padding: 1.6rem 0;
+  margin: 1.6rem 0 4rem 0;
+  width: 736px;
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+  outline: none;
+}
+.comment-submit-button:hover, .comment-delete-button:hover {
+  background: grey;
+}
+
+.comment-delete-button {
+  width: auto;
+  border-radius: 0px;
+  padding: 0.6rem 1rem;
+  background: #ccc;
+  position: absolute;
+  bottom: -2.4rem;
+  right: 3.2rem;
+  font-size: 1rem;
+  -webkit-transition: background 0.04s linear;
+  transition: background 0.04s linear;
+}
+.comment-delete-button:hover {
+  background: grey;
+}

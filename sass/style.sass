@@ -1,0 +1,110 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700'
+
+*
+	box-sizing: border-box
+
+html,body
+	width: 100%
+	height: 100%
+
+html
+	font-size: 10px
+
+body
+	font-family: 'Montserrat', sans-serif
+	font-size: 1.6rem
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.comments
+	width: 100%
+	height: 100%
+	padding: 2rem 4rem
+	max-width: 700px
+	margin: 0 auto
+
+.title
+	text-align: center
+	margin: 0 0 4rem 0
+
+.comments-list
+	list-style-type: none
+	margin: 3rem 0
+	padding: 0
+
+@keyframes enter 
+	from
+		opacity: 0
+		transform: translate3d(-75px,0,0)
+	
+.leave
+	opacity: 0
+	transform: translate3d(75px,0,0)
+
+.comment
+	padding: 1.6rem 3.2rem
+	margin-bottom: 2rem
+	background: #eee
+	border-radius: 2rem
+	position: relative
+	transition: all .2s ease-out
+	animation: enter .2s ease-in-out 1 
+
+.comment-username
+	font-size: 1.4rem
+	color: #666
+	
+.comment-body
+	font-size: 2rem
+	margin-bottom: 4rem
+	
+.comment-form *
+	display: block
+	margin-bottom: 1.2rem
+
+.comment-username-label, .comment-body-label
+	line-height: 2.6rem
+	color: #666
+
+#comment-username-input, #comment-body-input
+	border: 2px solid #ccc
+	border-radius: 10px
+	width: 100%
+	outline: none
+	padding: 1rem 1.6rem
+	&:focus
+		border-color: #bada55
+	
+.comment-submit-button, .comment-delete-button
+	border: none
+	background: #bada55
+	color: white
+	border-radius: 10px
+	padding: 1.6rem 0
+	margin: 1.6rem 0 4rem 0
+	width: 100%
+	transition: background .2s linear
+	outline: none
+	&:hover
+		background: lighten(#bada55, 5%)
+
+.comment-delete-button
+	width: auto
+	border-radius: 5px
+	padding: .6rem 1rem
+	background: #ccc
+	position: absolute
+	bottom: -2.4rem
+	right: 3.2rem
+	font-size: 1rem
+	transition: background .04s linear
+	&:hover
+		background: tint(red, 35%)
+
+
+
+
+
+
+
+
